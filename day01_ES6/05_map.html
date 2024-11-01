@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [10, 20, 30]
+        const data = [
+            { id: 1, name: 'aaa', age: 25 },
+            { id: 2, name: 'bbb', age: 20 },
+            { id: 3, name: 'ccc', age: 30 }
+        ]
+
+        //리액트에서 return문이 없으면 값이 나오지 않는다, 반드시 써야 한다.
+        arr.map((item, index) => {
+            return (console.log(index, item))
+        })
+        console.log('-------------------')
+
+        //리액트에서 반복되는 문장이 1개이면 {}, return을 생략가능
+        arr.map((item, index) => console.log(index, item))
+        console.log('-------------------')
+
+        data.map((item, index) => {
+            return (console.log(item.id + ", " + item.name + ", " + item.age))
+        })
+        console.log('-------------------')
+
+        //{}를 생략하면 return도 같이 생략되야한다
+        data.map((item, index) =>
+            console.log(item.id + ", " + item.name + ", " + item.age)
+        )
+
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- 
+map (반복문)
+
+[형식]
+배열.map((요소, 인덱스) => {
+   return 요소
+});
+ -->

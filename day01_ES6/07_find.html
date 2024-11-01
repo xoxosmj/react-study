@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [10, 20, 30, 20, 50]
+
+        const result1 = arr.find(item => item > 30)
+        console.log(result1)
+
+        const result2 = arr.find(item => item === 20)
+        console.log(result2)
+
+        //find는 아이템, findIndex는 인덱스를 가져온다
+        const result3 = arr.findIndex(item => item === 20)
+        console.log(result3)
+
+        const data = [
+            { id: 1, name: 'aaa', age: 25 },
+            { id: 2, name: 'bbb', age: 20 },
+            { id: 3, name: 'ccc', age: 30 }
+        ]
+
+        // id 가 1인값
+
+        const data2 = data.find(item => item.id === 1)
+        console.log(data2)
+
+        const data3 = data.find(item => item.name === 'ddd')
+        console.log(data3) //undefined
+
+        const data4 = data.findIndex(item => item.name === 'ddd')
+        console.log(data4) //-1
+
+
+    </script>
+
+</body>
+
+</html>
+
+<!--
+find => filter와 비슷, 결과는 하나의 값(처음만나는값을 가져온다)
+-->
